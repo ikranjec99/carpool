@@ -48,7 +48,8 @@ services:
     container_name: Carpool.Client
     environment:
       - REACT_APP_URL=http://localhost:3000
-      - REACT_APP_API_URL=http://localhost:5010/api
+      - REACT_APP_API_URL=http://localhost:5027/api
+      - WDS_SOCKET_PATH=/admin/socksjs-node
     expose:
       - 3000
     stdin_open: true
