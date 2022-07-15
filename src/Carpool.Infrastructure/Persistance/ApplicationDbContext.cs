@@ -1,4 +1,5 @@
 ﻿using Carpool.Application.Common.Interfaces;
+using Carpool.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
 
@@ -10,6 +11,8 @@ namespace Carpool.Infrastructure.Persistance
         {
 
         }
+
+        public DbSet<CarMake> CarMakes { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
