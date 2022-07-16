@@ -1,6 +1,7 @@
 using Carpool.API;
 using Carpool.Application;
 using Carpool.Infrastructure;
+using Carpool.Infrastructure.Persistance;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,6 +22,13 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+
+    // Initialise and seed database
+    using (var scope = app.Services.CreateScope())
+    {
+        var initialiser = scope.ServiceProvider.GetRequiredService<ApplicationDbContextInitialiser>();
+        await initialiser.InitialiseAsync();
+    }
 }
 
 app.UseHttpsRedirection();
