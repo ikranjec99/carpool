@@ -16,7 +16,7 @@
 
   <ItemGroup>
     <Folder Include="Common\" />
-    <Folder Include="Persistance\Migrations\" />
+    <Folder Include="Persistence\Migrations\" />
   </ItemGroup>
 
 </Project>
