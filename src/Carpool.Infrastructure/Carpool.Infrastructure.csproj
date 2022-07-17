@@ -7,16 +7,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Persistence\Migrations\20220717184155_RunCitiesSeeder.sql" />
+    <None Remove="Persistence\Migrations\20220717184155_RunDownCitiesSeeder.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Persistence\Migrations\20220717184155_RunCitiesSeeder.sql" />
+    <EmbeddedResource Include="Persistence\Migrations\20220717184155_RunDownCitiesSeeder.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="6.0.5" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Carpool.Application\Carpool.Application.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Common\" />
-    <Folder Include="Persistence\Migrations\" />
   </ItemGroup>
 
 </Project>
