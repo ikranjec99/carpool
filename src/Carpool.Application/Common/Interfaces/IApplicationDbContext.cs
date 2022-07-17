@@ -8,6 +8,7 @@ namespace Carpool.Application.Common.Interfaces
         public DbSet<CarMake> CarMakes { get; set; }
         public DbSet<Car> Cars { get; set; }
         public DbSet<Color> Colors { get; set; }
+        public DbSet<Employee> Employees { get; set; }
         Task<int> SaveChangesAsync(CancellationToken cancellationToken);
     }
 }
