@@ -1,18 +1,14 @@
-﻿using Carpool.Domain.Enums.CarColor;
+﻿using Carpool.Domain.Entities;
+using Carpool.Domain.Enums.CarColor;
 using Carpool.Domain.Enums.CarMake;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Carpool.Infrastructure.Persistence.Configurations
 {
-    public class CarConfiguration : IEntityTypeConfiguration<Domain.Entities.Car>
+    public class CarConfiguration : IEntityTypeConfiguration<Car>
     {
-        public void Configure(EntityTypeBuilder<Domain.Entities.Car> builder)
+        public void Configure(EntityTypeBuilder<Car> builder)
         {
             builder.Property(t => t.Id)
                 .IsRequired();
@@ -20,13 +16,13 @@ namespace Carpool.Infrastructure.Persistence.Configurations
             builder.Property(t => t.Name)
                 .IsRequired();
 
-            builder.Property(e => e.CarMake)
+            builder.Property(e => e.CarMakeId)
                 .IsRequired();
 
             builder.Property(e => e.CarModel)
                 .IsRequired();
 
-            builder.Property(e => e.Color)
+            builder.Property(e => e.ColorId)
                 .IsRequired();
 
             builder.Property(e => e.Plates)
@@ -39,7 +35,7 @@ namespace Carpool.Infrastructure.Persistence.Configurations
                 .IsRequired();
 
             builder.HasData(
-                new Domain.Entities.Car
+                new Car
                 {
                     Id = Guid.NewGuid(),
                     Name = "Milan's Golf",
@@ -49,7 +45,7 @@ namespace Carpool.Infrastructure.Persistence.Configurations
                     Plates = "BJ-513-DD",
                     NumberOfSeats = 5
                 },
-                new Domain.Entities.Car
+                new Car
                 {
                     Id = Guid.NewGuid(),
                     Name = "John's Mustang",
@@ -59,7 +55,7 @@ namespace Carpool.Infrastructure.Persistence.Configurations
                     Plates = "ZG-5220-IG",
                     NumberOfSeats = 3
                 },
-                new Domain.Entities.Car
+                new Car
                 {
                     Id = Guid.NewGuid(),
                     Name = "Patricia's Volvo",
@@ -69,7 +65,7 @@ namespace Carpool.Infrastructure.Persistence.Configurations
                     Plates = "DU-555-PP",
                     NumberOfSeats = 5
                 },
-                new Domain.Entities.Car
+                new Car
                 {
                     Id = Guid.NewGuid(),
                     Name = "Josip's Toyota",
@@ -79,7 +75,7 @@ namespace Carpool.Infrastructure.Persistence.Configurations
                     Plates = "PU-2224-DC",
                     NumberOfSeats = 3
                 },
-                new Domain.Entities.Car
+                new Car
                 {
                     Id = Guid.NewGuid(),
                     Name = "Damir's Skoda",
@@ -89,7 +85,7 @@ namespace Carpool.Infrastructure.Persistence.Configurations
                     Plates = "ST-555-BD",
                     NumberOfSeats = 5
                 },
-                new Domain.Entities.Car
+                new Car
                 {
                     Id = Guid.NewGuid(),
                     Name = "Ivan's Auid",
@@ -99,7 +95,7 @@ namespace Carpool.Infrastructure.Persistence.Configurations
                     Plates = "PU-333-DB",
                     NumberOfSeats = 3
                 },
-                new Domain.Entities.Car
+                new Car
                 {
                     Id = Guid.NewGuid(),
                     Name = "Lana's Seat",
@@ -109,7 +105,7 @@ namespace Carpool.Infrastructure.Persistence.Configurations
                     Plates = "KC-222-DA",
                     NumberOfSeats = 5
                 },
-                new Domain.Entities.Car
+                new Car
                 {
                     Id = Guid.NewGuid(),
                     Name = "Silvija's Dacia",
@@ -119,7 +115,7 @@ namespace Carpool.Infrastructure.Persistence.Configurations
                     Plates = "NA-221-IA",
                     NumberOfSeats = 5
                 },
-                new Domain.Entities.Car
+                new Car
                 {
                     Id = Guid.NewGuid(),
                     Name = "Tomislav's Suzuki",
@@ -129,7 +125,7 @@ namespace Carpool.Infrastructure.Persistence.Configurations
                     Plates = "B-444-AA",
                     NumberOfSeats = 5
                 },
-                new Domain.Entities.Car
+                new Car
                 {
                     Id = Guid.NewGuid(),
                     Name = "Nebojsa's Chevy",
