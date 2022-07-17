@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Carpool.Domain.Enums.CarMake
+﻿namespace Carpool.Domain.Enums.CarMake
 {
     public enum CarMakeEnum
     {
@@ -13,6 +7,10 @@ namespace Carpool.Domain.Enums.CarMake
         Audi = 3,
         Seat = 4,
         Toyota = 5,
-        Suzuki = 6
+        Suzuki = 6,
+        Chevrolet = 7,
+        Dacia = 8,
+        Ford = 9,
+        Volvo = 10
     }
 }
