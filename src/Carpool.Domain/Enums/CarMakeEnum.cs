@@ -1,4 +1,4 @@
-﻿namespace Carpool.Domain.Enums.CarMake
+﻿namespace Carpool.Domain.Enums
 {
     public enum CarMakeEnum
     {

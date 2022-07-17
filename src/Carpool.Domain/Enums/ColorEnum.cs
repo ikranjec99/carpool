@@ -1,4 +1,4 @@
-﻿namespace Carpool.Domain.Enums.CarColor
+﻿namespace Carpool.Domain.Enums
 {
     public enum ColorEnum
     {
