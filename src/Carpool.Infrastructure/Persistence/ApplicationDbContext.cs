@@ -16,6 +16,7 @@ namespace Carpool.Infrastructure.Persistance
         public DbSet<Car> Cars { get; set; }
         public DbSet<Color> Colors { get; set; }
         public DbSet<Employee> Employees { get; set; }
+        public DbSet<County> Counties { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
