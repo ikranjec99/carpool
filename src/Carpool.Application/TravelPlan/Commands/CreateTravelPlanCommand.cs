@@ -112,10 +112,6 @@ namespace Carpool.Application.TravelPlan.Commands
 
             foreach (var employeeId in request.Employees)
             {
-                var currentEmployee = await _context.Employees
-                    .Where(x => x.Id == employeeId)
-                    .FirstOrDefaultAsync();
-
                 var travelPlanEmployee = new TravelPlanEmployee
                 {
                     Id = Guid.NewGuid(),
