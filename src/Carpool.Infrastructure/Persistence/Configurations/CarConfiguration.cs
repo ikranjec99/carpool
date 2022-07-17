@@ -1,6 +1,5 @@
 ﻿using Carpool.Domain.Entities;
-using Carpool.Domain.Enums.CarColor;
-using Carpool.Domain.Enums.CarMake;
+using Carpool.Domain.Enums;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
