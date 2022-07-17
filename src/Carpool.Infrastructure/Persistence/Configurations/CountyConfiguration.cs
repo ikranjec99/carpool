@@ -42,7 +42,7 @@ namespace Carpool.Infrastructure.Persistence.Configurations
                 new County
                 {
                     Id = (int)CountyEnum.Karlovacka,
-                    Name = "Karlovacka"
+                    Name = "Karlovačka"
                 },
                 new County
                 {
