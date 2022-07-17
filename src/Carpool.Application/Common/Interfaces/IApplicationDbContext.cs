@@ -10,6 +10,7 @@ namespace Carpool.Application.Common.Interfaces
         public DbSet<Color> Colors { get; set; }
         public DbSet<Employee> Employees { get; set; }
         public DbSet<County> Counties { get; set; }
+        public DbSet<City> Cities { get; set; }
         Task<int> SaveChangesAsync(CancellationToken cancellationToken);
     }
 }
