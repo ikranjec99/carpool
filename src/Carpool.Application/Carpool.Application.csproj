@@ -18,4 +18,8 @@
     <ProjectReference Include="..\Carpool.Domain\Carpool.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="TravelPlan\Queries\" />
+  </ItemGroup>
+
 </Project>
