@@ -1,12 +1,18 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import { MantineProvider } from "@mantine/core";
+import { Navigation } from "./app/UI/Navigation/Navigation";
+import { Router } from "./app/Router/Router";
 
-function App() {
+import "./App.css";
+
+const App = () => {
   return (
-    <div className="App">
-      held
-    </div>
+    <>
+      <MantineProvider>
+        <Navigation routerProps={Router} />
+      </MantineProvider>
+    </>
   );
-}
+};
 
 export default App;
