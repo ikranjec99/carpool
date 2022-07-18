@@ -1,0 +1,9 @@
+.custom-label-font {
+    font-weight: 500;
+    margin-bottom: 4px;
+    font-size: 14px;
+    color: #212529;
+    word-break: break-word;
+    cursor: default;
+    line-height: 1.55;
+}
