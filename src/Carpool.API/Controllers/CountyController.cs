@@ -1,5 +1,4 @@
-﻿using Carpool.Application.Common.Models;
-using Carpool.Application.Counties.Queries;
+﻿using Carpool.Application.Counties.Queries;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -16,16 +15,22 @@ namespace Carpool.API.Controllers
         }
 
         /// <summary>
-        /// Get paginated counties 
+        /// Get list of counties 
         /// </summary>
-        /// <param name="command"></param>
+        /// <param name="queryOptions"></param>
         /// <returns></returns>
         [HttpGet]
-        public async Task<IActionResult> GetCounties([FromQuery]QueryOptions queryOptions)
+        public async Task<IActionResult> GetCounties()
         {
-            return Ok(await _mediator.Send(new GetPaginatedCountiesQuery(queryOptions)));
+            return Ok(await _mediator.Send(new GetCountiesQuery()));
         }
 
+
+        /// <summary>
+        /// Get counties that match search term
+        /// </summary>
+        /// <param name="queryOptions"></param>
+        /// <returns></returns>
         [HttpGet("search")]
         public async Task<IActionResult> SearchCounties(string query)
         {
