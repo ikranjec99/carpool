@@ -1,0 +1,16 @@
+.required-default {
+    color: #f03e3e;
+    margin: 3px;
+}
+
+.error-default {
+    -webkit-font-smoothing: antialiased;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+    -webkit-tap-highlight-color: transparent;
+    font-size: 14px;
+    line-height: 1.55;
+    text-decoration: none;
+    margin-top: 5px;
+    word-break: break-word;
+    color: #f03e3e!important;
+}
