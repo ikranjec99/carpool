@@ -65,7 +65,7 @@ export const Navigation = ({ routerProps }: NavigationProps) => {
         header={
           <Header height={70}>
             <div
-              style={{ display: "flex", alignItems: "center", height: "100%" }}
+              className={'header'}
             >
               <MediaQuery largerThan="sm" styles={{ display: "none" }}>
                 <Burger
