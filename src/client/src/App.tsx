@@ -4,12 +4,15 @@ import { Navigation } from "./app/UI/Navigation/Navigation";
 import { Router } from "./app/Router/Router";
 
 import "./App.css";
+import GlobalContextProvider from "./app/Contexts/GlobalContext";
 
 const App = () => {
   return (
     <>
       <MantineProvider>
-        <Navigation routerProps={Router} />
+        <GlobalContextProvider>
+          <Navigation routerProps={Router} />
+        </GlobalContextProvider>
       </MantineProvider>
     </>
   );
