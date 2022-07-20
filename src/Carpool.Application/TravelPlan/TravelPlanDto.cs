@@ -10,8 +10,10 @@ namespace Carpool.Application.TravelPlan
         public Car Car { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public TravelPlanStartLocation TravelPlanStartLocation { get; set; }
-        public TravelPlanEndLocation TravelPlanEndLocation { get; set; }
+        public string TravelPlanStartLocation { get; set; }
+        public Guid TravelPlanStartLocationId { get; set; }
+        public string TravelPlanEndLocation { get; set; }
+        public Guid TravelPlanEndLocationId { get; set; }
 
         public void Mapping(Profile profile)
         {
@@ -20,8 +22,8 @@ namespace Carpool.Application.TravelPlan
                 .ForMember(d => d.Car, opt => opt.MapFrom(s => s.Car))
                 .ForMember(d => d.StartDate, opt => opt.MapFrom(s => s.StartDate))
                 .ForMember(d => d.EndDate, opt => opt.MapFrom(s => s.EndDate))
-                .ForMember(d => d.TravelPlanStartLocation, opt => opt.MapFrom(s => s.TravelPlanStartLocation))
-                .ForMember(d => d.TravelPlanEndLocation, opt => opt.MapFrom(s => s.TravelPlanEndLocation));
+                .ForMember(d => d.TravelPlanStartLocation, opt => opt.MapFrom(s => s.TravelPlanStartLocation.City.Name))
+                .ForMember(d => d.TravelPlanEndLocation, opt => opt.MapFrom(s => s.TravelPlanEndLocation.City.Name));
         }
     }
 }
